@@ -1,5 +1,9 @@
 /* You can add global styles to this file, and also import other style files */
 
+body {
+	padding: 1.25rem 0;
+}
+
 .panel.active {
 	background: lightblue;
 	color: white;
