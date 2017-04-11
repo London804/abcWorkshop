@@ -1,8 +1,14 @@
-<p>
-  dashboard works!
-</p>
-
-<app-stat-filters></app-stat-filters>
-<app-stat-graphs></app-stat-graphs>
-<app-video-list></app-video-list>
-<app-video-viewer></app-video-viewer>
+<section class="container">
+	<div class="row">
+		<div class="col-xs-2">
+			<app-video-list></app-video-list>
+		</div>
+		<div class="col-xs-8">
+			<app-stat-graphs></app-stat-graphs>
+			<app-video-viewer></app-video-viewer>
+		</div>
+		<div class="col-xs-2">
+			<app-stat-filters></app-stat-filters>
+		</div>
+	</div>
+</section>

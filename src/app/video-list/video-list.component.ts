@@ -340,8 +340,14 @@ export class VideoListComponent implements OnInit {
 //   }
 // ]
 
+	activeIndex: number;
+
+	setActive(index: number): void {
+  		this.activeIndex = index;
+  	}
 
   constructor() {
+
 
   }
 
