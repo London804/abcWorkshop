@@ -1,0 +1,11 @@
+<div *ngFor="let video of videos">
+	<h1>{{video.title}}</h1>
+	<h2>{{video.author}}</h2>
+	<h3>{{video.id}}</h3>
+
+	<ul *ngFor="let detail of video.viewDetails">
+		<li>{{detail.age}}</li>
+		<li>{{detail.region}}</li>
+		<li>{{detail.date}}</li>
+	</ul>
+</div>
