@@ -1,3 +1,6 @@
-<p>
-  video-viewer works!
-</p>
+<div class="panel panel-primary">
+  <div class="panel-heading">{{ video?.title }} - {{ video?.author }}</div>
+  <div class="panel-body">
+    {{ video | json }}
+  </div>
+</div>

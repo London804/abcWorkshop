@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-stat-graphs',
@@ -6,6 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./stat-graphs.component.scss']
 })
 export class StatGraphsComponent implements OnInit {
+	@Input() a
+ 	@Input() b
 
   constructor() { }
 

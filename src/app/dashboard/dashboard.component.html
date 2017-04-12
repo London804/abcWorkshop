@@ -1,14 +1,18 @@
 <section class="container">
 	<div class="row">
 		<div class="col-xs-3">
-			<app-video-list></app-video-list>
+			<app-video-list (videoSelected)="onVideoSelected($event)"></app-video-list>
 		</div>
 		<div class="col-xs-6">
-			<app-stat-graphs></app-stat-graphs>
-			<app-video-viewer></app-video-viewer>
+			<app-stat-graphs
+				[a]="fromParent"
+				[b]="fromParentAgain">
+
+				</app-stat-graphs>
+			<app-video-viewer [video]="selectedVideo"></app-video-viewer>
 		</div>
 		<div class="col-xs-3">
-			<app-stat-filters></app-stat-filters>
+			<app-stat-filters (onSendToParent)="sendToParent($event)" (onSendToParentAgain)="sendToParentAgain($event)"></app-stat-filters>
 		</div>
 	</div>
 </section>

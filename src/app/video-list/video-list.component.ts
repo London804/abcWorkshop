@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 
 //adding to constant to make it work app wide. typings.d.ts has the interface
 
@@ -171,6 +171,7 @@ const VIDEO_DATA: Array<IVideo> = [
   styleUrls: ['./video-list.component.scss']
 })
 export class VideoListComponent implements OnInit {
+	@Output() videoSelected = new EventEmitter<IVideo>();
 
 	//this allows it to be in the const and it has to match
 	videos: IVideo[] = VIDEO_DATA
@@ -342,8 +343,9 @@ export class VideoListComponent implements OnInit {
 
 	activeIndex: number;
 
-	setActive(index: number): void {
+	setActive(index: number, video: IVideo): void {
   		this.activeIndex = index;
+  		this.videoSelected.emit(video);
   	}
 
   constructor() {
@@ -352,6 +354,7 @@ export class VideoListComponent implements OnInit {
   }
 
   ngOnInit() {
+	this.setActive(0, this.videos[0]);
   }
 
 }
